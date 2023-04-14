@@ -1,0 +1,46 @@
+mqtt:
+  sensor:
+    - name: "VoltageL1_V"
+      state_topic: "homeassistant/basement/smartmeter/VoltageL1_V"
+      unit_of_measurement: "V"
+    - name: "VoltageL2_V"
+      state_topic: "homeassistant/basement/smartmeter/VoltageL2_V"
+      unit_of_measurement: "V"
+    - name: "VoltageL3_V"
+      state_topic: "homeassistant/basement/smartmeter/VoltageL3_V"
+      unit_of_measurement: "V"
+    - name: "CurrentL1_A"
+      state_topic: "homeassistant/basement/smartmeter/CurrentL1_A"
+      unit_of_measurement: "A"
+    - name: "CurrentL2_A"
+      state_topic: "homeassistant/basement/smartmeter/CurrentL2_A"
+      unit_of_measurement: "A"
+    - name: "CurrentL3_A"
+      state_topic: "homeassistant/basement/smartmeter/CurrentL3_A"
+      unit_of_measurement: "A"
+    - name: "InstantaneousPowerIn_W"
+      state_topic: "homeassistant/basement/smartmeter/InstantaneousPowerIn_W"
+      unit_of_measurement: "W"
+      state_class: measurement
+    - name: "InstantaneousPowerOut_W"
+      state_topic: "homeassistant/basement/smartmeter/InstantaneousPowerOut_W"
+      unit_of_measurement: "W"
+    - name: "ActiveEnergyIn_kWh"
+      state_topic: "homeassistant/basement/smartmeter/ActiveEnergyIn_kWh"
+      unit_of_measurement: "kWh"
+      state_class: total
+    - name: "ActiveEnergyOut_kWh"
+      state_topic: "homeassistant/basement/smartmeter/ActiveEnergyOut_kWh"
+      unit_of_measurement: "kWh"
+      state_class: total
+    - name: "ReactiveEnergyIn_W"
+      state_topic: "homeassistant/basement/smartmeter/ReactiveEnergyIn_W"
+      unit_of_measurement: "W"
+      state_class: total
+    - name: "ReactiveEnergyOut_W"
+      state_topic: "homeassistant/basement/smartmeter/ReactiveEnergyOut_W"
+      unit_of_measurement: "W"
+      state_class: total
+
+
+
