@@ -33,14 +33,11 @@ mqtt:
       state_topic: "homeassistant/basement/smartmeter/ActiveEnergyOut_kWh"
       unit_of_measurement: "kWh"
       state_class: total
-    - name: "ReactiveEnergyIn_W"
-      state_topic: "homeassistant/basement/smartmeter/ReactiveEnergyIn_W"
-      unit_of_measurement: "W"
+    - name: "ReactiveEnergyIn_kWh"
+      state_topic: "homeassistant/basement/smartmeter/ReactiveEnergyIn_kWh"
+      unit_of_measurement: "kWh"
       state_class: total
-    - name: "ReactiveEnergyOut_W"
-      state_topic: "homeassistant/basement/smartmeter/ReactiveEnergyOut_W"
-      unit_of_measurement: "W"
+    - name: "ReactiveEnergyOut_kWh"
+      state_topic: "homeassistant/basement/smartmeter/ReactiveEnergyOut_kWh"
+      unit_of_measurement: "kWh"
       state_class: total
-
-
-

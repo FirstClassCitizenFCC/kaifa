@@ -294,17 +294,17 @@ class Obis:
         "pos": "3.8.0",
         "byte": to_bytes("1.0.3.8.0.255"),
         "desc_name": "ReactiveEnergy In",
-        "unit": "W",
-        "mod": None,
-        "mqtt_topic": "ReactiveEnergyIn_W"
+        "unit": "kWh",
+        "mod": "self.obis[d['byte']] / 1000",
+        "mqtt_topic": "ReactiveEnergyIn_kWh"
     }
     ReactiveEnergyOut = {
         "pos": "4.8.0",
         "byte": to_bytes("1.0.4.8.0.255"),
         "desc_name": "ReactiveEnergy Out",
-        "unit": "W",
-        "mod": None,
-        "mqtt_topic": "ReactiveEnergyOut_W"
+        "unit": "kWh",
+        "mod": "self.obis[d['byte']] / 1000",
+        "mqtt_topic": "ReactiveEnergyOut_kWh"
     }
     Factor = {
         "pos": "13.7.0",
