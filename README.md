@@ -3,7 +3,7 @@
 ## Overview
 
 This script was made to read out the new Smart Meter "Kaifa MA309"
-used by Austrian power grid operators, here tested with TINETZ and EVN.
+used by Austrian power grid operators, here tested with TINETZ, EVN and VKW.
 
 Specification of the interface:
 https://www.tinetz.at/fileadmin/user_upload/Kundenservice/pdf/Beschreibung_Kundenschnittstelle_Smart_Meter_TINETZ.pdf
@@ -48,7 +48,7 @@ A template file `meter_template.json` can be recycled for this.
   "bytesize": "serial.EIGHTBITS",
   "key_hex_string": "",
   "interval": 1,
-  "supplier": "TINETZ",
+  "supplier": "VKW",
   "export_format": "SOLARVIEW",
   "export_file_abspath": "/var/run/kaifareader/kaifa.txt",
   "export_mqtt_server": "mymqtt.examplebroker.com",
@@ -80,6 +80,7 @@ Please provide your electricity supplier by the field "supplier". Because each s
 the telegrams differ. This script was tested with suppliers:
 - TINETZ
 - EVN
+- VKW
 
 Make sure to only select the values you need from the list in `wanted_values` by deleting the elements you don't want. 
 The logfile will show the related OBIS-Values when run in `logging.INFO`.

@@ -79,6 +79,13 @@ class SupplierEVN(Supplier):
     ic_start_byte = 22
     enc_data_start_byte = 26
 
+class SupplierVKW(Supplier):
+    name = "VKW"
+    frame2_start_bytes_hex = '68727268'
+    frame2_start_bytes = b'\x68\x72\x72\x68'  # 68 72 72 68
+    ic_start_byte = 23
+    enc_data_start_byte = 27
+
 
 class Constants:
     config_file = "/etc/kaifareader/meter.json"
@@ -501,10 +508,14 @@ g_ser = serial.Serial(
         bytesize = g_cfg.get_bytesize(),
         timeout = g_cfg.get_interval())
 
+print("using supplier {}".format(g_cfg.get_supplier()))
+
 if g_cfg.get_supplier().upper() == SupplierTINETZ.name:
     g_supplier = SupplierTINETZ()
 elif g_cfg.get_supplier().upper() == SupplierEVN.name:
     g_supplier = SupplierEVN()
+elif g_cfg.get_supplier().upper() == SupplierVKW.name:
+    g_supplier = SupplierVKW()
 else:
     raise Exception("Supplier not supported: {}".format(g_cfg.get_supplier()))
 

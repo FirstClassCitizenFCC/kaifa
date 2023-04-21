@@ -8,7 +8,7 @@
   "bytesize": "serial.EIGHTBITS",
   "key_hex_string": "",
   "interval": 1,
-  "supplier": "TINETZ",
+  "supplier": "VKW",
   "export_format": "SOLARVIEW",
   "export_file_abspath": "/var/run/kaifareader/kaifa.txt",
   "export_mqtt_server": "mymqtt.examplebroker.com",
